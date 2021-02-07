@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: ppercca/simple-reverse-proxy
+      - image: ppercca/reverse-proxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
