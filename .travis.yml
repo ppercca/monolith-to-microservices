@@ -15,7 +15,6 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t ppercca/udagram-frontend -f ./udagram-frontend/Dockerfile ./udagram-frontend
   - docker build -t ppercca/udagram-api-feed -f ./udagram-api-feed/Dockerfile ./udagram-api-feed
   - docker build -t ppercca/udagram-api-user -f ./udagram-api-user/Dockerfile ./udagram-api-user
   - docker build -t ppercca/reverse-proxy -f ./reverse-proxy/Dockerfile ./reverse-proxy
@@ -24,5 +23,4 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ppercca/udagram-api-feed
   - docker push ppercca/udagram-api-user
-  - docker push ppercca/udagram-frontend
-  - docker push ppercca/simple-reverse-proxy
+  - docker push ppercca/reverse-proxy
