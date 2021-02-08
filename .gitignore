@@ -12,6 +12,7 @@ log.txt
 .vscode/
 npm-debug.log*
 
+deploy/*
 set_env.sh
 .idea/
 .ionic/
